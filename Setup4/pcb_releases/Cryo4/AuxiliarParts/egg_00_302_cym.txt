@@ -1,0 +1,9 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"90-04082022-059306";"";
+"REFERENCE";"EGG.00.302.CYM";"";
+"TraceParts.PartTitle";"Fixed receptacle, nut fixing (IP 50)";"";
+"TraceParts.InstanceId";"90-04082022-059306CQIGRU86KCMVECONFQYUQE283";"";
+"SUPPLIER";"LEMO";"";
+"DESIGN";"Fixed receptacle, nut fixing (IP 50)";"";
+"TraceParts.PartVersion";"1.0.0";"";
+"TraceParts.PartLanguage";"en";"";

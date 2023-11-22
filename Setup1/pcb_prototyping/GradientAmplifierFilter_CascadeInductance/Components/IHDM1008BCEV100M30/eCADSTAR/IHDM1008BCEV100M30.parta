@@ -1,0 +1,68 @@
+(Japanese_coding: sjis)
+(function "ECS_2342785"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2019-09-30-11:49:43)
+    (utime 2023-03-07-16:10:32)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+    )
+    (property "symbolName" "IHDM1008BCEV100M30")
+)
+
+
+(pinAssign "ECS_2342785"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2019-09-30-11:49:43)
+    (utime 2023-03-07-16:10:32)
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_2342785")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "IHDM1008BCEV100M30")
+)
+
+
+(part "IHDM1008BCEV100M30"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2019-09-30-11:49:43)
+    (utime 2023-03-07-16:10:32)
+    (packageRef "IHDM1008BCEV100M30")
+    (pinAssignRef "ECS_2342785")
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "NO")
+    (property "refDesPrefix" "L")
+    (property "description" "VISHAY - IHDM1008BCEV100M30 - INDUCTOR, 10UH, 20%, 30A")
+    (property "Manufacturer_Name" "Vishay")
+    (property "Manufacturer_Part_Number" "IHDM1008BCEV100M30")
+    (property "Mouser_Part_Number" "70-IHDM1008BCV100M30")
+    (property "Mouser_Price/Stock" "https://www.mouser.co.uk/ProductDetail/Vishay-Dale/IHDM1008BCEV100M30?qs=T3oQrply3y8HteQqJVJyLg%3D%3D")
+    (property "Arrow_Part_Number" "")
+    (property "Arrow_Price/Stock" "")
+    (property "Datasheet_Link" "https://www.mouser.com/datasheet/2/427/ihdm-1008bc-v0-1596104.pdf")
+    (property "compAreaTopHeight" 22.75)
+)
+
+

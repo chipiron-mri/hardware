@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SCF19XV-300-1R9A003JV
+D KEMET, SCF-XV, AC Line Filters, Common Mode, 0.11 mH 
+K
+F https://connect.kemet.com:7667/gateway/IntelliData-ComponentDocumentation/1.0/download/datasheet/SCF19XV-300-1R9A003JV.pdf
+$ENDCMP
+#
+#End Doc Library

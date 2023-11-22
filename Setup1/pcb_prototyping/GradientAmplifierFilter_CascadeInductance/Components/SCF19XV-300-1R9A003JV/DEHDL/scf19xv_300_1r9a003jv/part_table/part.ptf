@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'SCF19XV_300_1R9A003JV'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "KEMET", "SCF19XV-300-1R9A003JV" (!) = "", "SCF19XV3001R9A003JV", "Other", "80-SCF19XV3001R903JV", "https://www.mouser.co.uk/ProductDetail/KEMET/SCF19XV-300-1R9A003JV?qs=MyNHzdoqoQJ8dcdKI%2FcPyQ%3D%3D", "KEMET, SCF-XV, AC Line Filters, Common Mode, 0.11 mH ", "https://connect.kemet.com:7667/gateway/IntelliData-ComponentDocumentation/1.0/download/datasheet/SCF19XV-300-1R9A003JV.pdf", "27.5 mm"
+END_PART
+
+END.

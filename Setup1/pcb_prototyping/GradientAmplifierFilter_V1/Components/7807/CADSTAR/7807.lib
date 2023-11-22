@@ -1,0 +1,16 @@
+.7807 :1 ;KEYSTONE - 7807 - TERMINAL, PCB SCREW, 2.57MM
+"7807"
+*STM J
+*NGS
+*PLB 1="1" 2="2" 3="3" 4="4" 5="5" 6="6"
+*MXP 6
+*DFN 7807
+~!Mouser Part Number (534-7807)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/7807?qs=%2F%252BPMR94VuMaEJokheHBVWg%3D%3D)
+~!Manufacturer_Name (Keystone Electronics)
+~!Manufacturer_Part_Number (7807)
+~!Link Datasheet (http://www.keyelco.com/product-pdf.cfm?p=1119)
+~!Height (11.76mm)
+~!3D_Model (7807)
+"7807"
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 

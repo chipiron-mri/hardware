@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "KTD500B157M99A0B00"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2023-01-09-12:14:32)
+    (mountForm default
+        (footprintRef "KTD500B157M99A0B00")
+        (spec "System")
+    )
+)

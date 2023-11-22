@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART '7807'
+CLASS = IO
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Keystone Electronics", "7807" (!) = "", "7807", "Other", "534-7807", "https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/7807?qs=%2F%252BPMR94VuMaEJokheHBVWg%3D%3D", "KEYSTONE - 7807 - TERMINAL, PCB SCREW, 2.57MM", "http://www.keyelco.com/product-pdf.cfm?p=1119", "11.76 mm"
+END_PART
+
+END.

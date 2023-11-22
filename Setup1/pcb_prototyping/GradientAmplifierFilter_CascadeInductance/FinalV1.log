@@ -1,0 +1,24 @@
+Circuit: * C:\work\PCB Design\GradientAmplifierFilter_CascadeInductance\FinalV1.asc
+
+WARNING: Node N006 is floating.
+WARNING: Node N001 is floating.
+
+.OP point found by inspection.
+
+Date: Mon Nov 13 09:22:15 2023
+Total elapsed time: 0.078 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 9744
+traniter = 9744
+tranpoints = 4818
+accept = 3510
+rejected = 1308
+matrix size = 10
+fillins = 0
+solver = Normal
+Matrix Compiler1:      25 opcodes  0.2/[0.1]/0.2
+Matrix Compiler2:      56 opcodes  0.2/[0.1]/0.2
+

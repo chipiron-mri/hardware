@@ -1,0 +1,16 @@
+.B32320I8207K000 :1 ;AC Film Capacitors incl. Motor Run, 200?F, 800V DC, 60mm (D) x 120mm (H)
+B32320I8207K000
+*STM C
+*NGS
+*PLB 1="1" 2="2" 3="3" 4="4" 5="5"
+*MXP 5
+*DFN B32320I8207K000
+~!Mouser Part Number (871-B32320I8207K000)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/EPCOS-TDK/B32320I8207K000?qs=ti9wR6LxNKVDH%2F2Xvz2DHw%3D%3D)
+~!Manufacturer_Name (TDK)
+~!Manufacturer_Part_Number (B32320I8207K000)
+~!Link Datasheet (https://product.tdk.com/system/files/dam/doc/product/capacitor/film/ac-motor/data_sheet/b32320i_series.pdf)
+~!Height (120mm)
+~!3D_Model (B32320I8207K000)
+B32320I8207K000
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 

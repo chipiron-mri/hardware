@@ -1,0 +1,66 @@
+(Japanese_coding: sjis)
+(function "ECS_872496"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2020-05-14-08:27:27)
+    (utime 2023-03-07-16:10:32)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+    )
+    (property "symbolName" "KTD500B157M99A0B00")
+)
+
+
+(pinAssign "ECS_872496"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2020-05-14-08:27:27)
+    (utime 2023-03-07-16:10:32)
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_872496")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "KTD500B157M99A0B00")
+)
+
+
+(part "KTD500B157M99A0B00"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2020-05-14-08:27:27)
+    (utime 2023-03-07-16:10:32)
+    (packageRef "KTD500B157M99A0B00")
+    (pinAssignRef "ECS_872496")
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "NO")
+    (property "refDesPrefix" "C")
+    (property "description" "Multilayer Ceramic Capacitors MLCC - Leaded 150uF 50V 20% X7R DIPPED RADIAL LEAD MULTILAYER CERAMIC CAPACITORS")
+    (property "Mouser_Part_Number" "661-KTD500B157M99A0B")
+    (property "Mouser_Price/Stock" "https://www.mouser.co.uk/ProductDetail/United-Chemi-Con/KTD500B157M99A0B00?qs=YQnJFR48xcBMxPUKlvfAsA%3D%3D")
+    (property "Manufacturer_Name" "Chemi-Con")
+    (property "Manufacturer_Part_Number" "KTD500B157M99A0B00")
+    (property "Datasheet_Link" "https://www.mouser.co.uk/datasheet/2/420/ce-ntd-e-2018-1488869.pdf")
+    (property "compAreaTopHeight" 20)
+)
+
+

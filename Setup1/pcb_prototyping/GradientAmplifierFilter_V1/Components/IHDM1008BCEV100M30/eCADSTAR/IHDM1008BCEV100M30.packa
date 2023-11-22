@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "IHDM1008BCEV100M30"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2019-09-30-11:49:43)
+    (mountForm default
+        (footprintRef "IHDM1008BCEV100M30")
+        (spec "System")
+    )
+)

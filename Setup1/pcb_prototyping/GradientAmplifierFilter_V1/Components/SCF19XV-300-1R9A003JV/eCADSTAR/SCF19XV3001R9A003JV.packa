@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "SCF19XV-300-1R9A003JV"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2022-10-21-11:34:06)
+    (mountForm default
+        (footprintRef "SCF19XV3001R9A003JV")
+        (spec "System")
+    )
+)

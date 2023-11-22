@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP IHDM1008BCEV100M30
+D VISHAY - IHDM1008BCEV100M30 - INDUCTOR, 10UH, 20%, 30A
+K
+F https://www.mouser.com/datasheet/2/427/ihdm-1008bc-v0-1596104.pdf
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,109 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "KTD500B157M99A0B00"
+   (description "Multilayer Ceramic Capacitors MLCC - Leaded 150uF 50V 20% X7R DIPPED RADIAL LEAD MULTILAYER CERAMIC CAPACITORS")
+   (family "CAP")
+   (package "KTD500B157M99A0B00")
+   (attribute "Datasheet Link" "https://www.mouser.co.uk/datasheet/2/420/ce-ntd-e-2018-1488869.pdf")
+   (attribute "Geometry.Height" "20mm")
+   (attribute "Mouser Part Number" "661-KTD500B157M99A0B")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/United-Chemi-Con/KTD500B157M99A0B00?qs=YQnJFR48xcBMxPUKlvfAsA%3D%3D")
+   (attribute "Manufacturer_Name" "Chemi-Con")
+   (attribute "Manufacturer_Part_Number" "KTD500B157M99A0B00")
+   (gate
+    (symbol "KTD500B157M99A0B00")
+    (pin "1" 1 PS)
+    (pin "2" 2 PS)
+   )
+  )
+  (symbol "KTD500B157M99A0B00"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 220 100) (pt 220 -100))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 280 100) (pt 280 -100))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 200 0) (pt 220 0))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 280 0) (pt 300 0))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 0 -10) (rot 0) (just TOP LEFT) (visible false))
+    (number (pt 0 10) (rot 0) (just BOTTOM LEFT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 500 0) (rot 0) (mir X) (visible true))
+    (name (pt 0 -10) (rot 0) (just TOP LEFT) (visible false))
+    (number (pt 0 10) (rot 0) (just BOTTOM LEFT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "KTD500B157M99A0B00"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed true)
+      (pt -1.75 3.75)
+      (pt 26.75 3.75)
+      (pt 26.75 -3.75)
+      (pt -1.75 -3.75)
+      (pt -1.75 3.75))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -1.75 3.75)
+      (pt 26.75 3.75)
+      (pt 26.75 -3.75)
+      (pt -1.75 -3.75)
+      (pt -1.75 3.75))))
+   (layer OCCA
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -2.75 4.75)
+      (pt 27.75 4.75)
+      (pt 27.75 -4.75)
+      (pt -2.75 -4.75)
+      (pt -2.75 4.75))))
+   (leg 1 (pt 0.000 0.000) (padstack 0))
+   (leg 2 (pt 25.000 0.000) (padstack 0))
+   (padstack 0
+    (hole 1.05)
+    (plated true)
+    (pad (layer TCOP) (round 1.575))
+    (pad (layer INNER) (round 1.575))
+    (pad (layer BCOP) (round 1.575))
+   )
+   (model "KTD500B157M99A0B00.stp"
+    (euler 0 0 0)
+    (offset 0 0 0)
+   )
+  )
+ )
+)

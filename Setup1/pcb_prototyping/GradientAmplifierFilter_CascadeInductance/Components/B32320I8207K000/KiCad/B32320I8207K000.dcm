@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP B32320I8207K000
+D AC Film Capacitors incl. Motor Run, 200?F, 800V DC, 60mm (D) x 120mm (H)
+K
+F https://product.tdk.com/system/files/dam/doc/product/capacitor/film/ac-motor/data_sheet/b32320i_series.pdf
+$ENDCMP
+#
+#End Doc Library

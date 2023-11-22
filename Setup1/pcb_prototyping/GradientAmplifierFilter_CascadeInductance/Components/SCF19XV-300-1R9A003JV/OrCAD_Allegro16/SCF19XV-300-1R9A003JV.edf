@@ -1,0 +1,116 @@
+
+(EDIF
+  (rename &SCF19XV_300_1R9A003JV "SCF19XV_300_1R9A003JV")
+  (EDIFVersion 2 0 0)
+  (EDIFLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timestamp 2023 09 20 14 58 38)
+      (dataOrigin "17076275/1223673/2.50/4/2/Filter")
+      (program "SamacSys ECAD Model SCF19XV_300_1R9A003JV"
+        (version "2.3"))))
+  (library
+  (rename &SCF19XV_300_1R9A003JV "SCF19XV_300_1R9A003JV")
+    (EDIFLevel 0)
+    (technology
+      (numberDefinition (scale 1 (e 254 -6) (unit DISTANCE)))
+      (userData GRIDRESOLUTION (integer 50 50))
+      (figureGroup DEFAULT (pathWidth 10) (textHeight 100))
+      (figureGroup PROPERTY (pathWidth 10) (textHeight 90))
+      (figureGroup PINNUMBER (pathWidth 10) (textHeight 90))
+      (figureGroup PINNAME (pathWidth 10) (textHeight 90))
+      (figureGroup COMMENT (pathWidth 10) (textHeight 90))
+      (figureGroup PIN (pathWidth 10) (textHeight 90))
+      (figureGroup GRAPHIC (pathWidth 10) (textHeight 100))
+    )
+    (cell
+      (rename &SCF19XV_300_1R9A003JV "SCF19XV_300_1R9A003JV")
+      (cellType GENERIC)
+      (view
+        (rename NORMAL "Normal")
+        (viewType SCHEMATIC)
+        (interface
+          (designator "FL")
+          (property (rename PACKAGENAME "PackageName") (string "SCF19XV_300_1R9A003JV"))
+          (property (rename ISHETEROGENEOUS "IsHeterogeneous") (string "False"))
+          (property (rename DEVICESINVIEW "DevicesInView") (string "1"))
+          (property (rename DEVICESINPACKAGE "DevicesInPackage") (string "1"))
+          (property (rename DEVICEDESIGNATOR "DeviceDesignator") (string "A"))
+          (property (rename DEVICENUMBERING "DeviceNumbering") (string "Alpha"))
+          (property (rename PCB_32_FOOTPRINT "PCB Footprint") (string "SCF19XV3001R9A003JV"))
+          (property (rename &Mouser_Part_Number "Mouser Part Number") (string "80-SCF19XV3001R903JV"))
+          (property (rename &Mouser_Price_Stock "Mouser Price/Stock") (string "https://www.mouser.co.uk/ProductDetail/KEMET/SCF19XV-300-1R9A003JV?qs=MyNHzdoqoQJ8dcdKI%2FcPyQ%3D%3D"))
+          (property (rename &Manufacturer_Name "Manufacturer_Name") (string "KEMET"))
+          (property (rename &Manufacturer_Part_Number "Manufacturer_Part_Number") (string "SCF19XV-300-1R9A003JV"))
+          (property (rename &Description "Description") (string "KEMET, SCF-XV, AC Line Filters, Common Mode, 0.11 mH "))
+          (property (rename &Datasheet_Link "Datasheet Link") (string "https://connect.kemet.com:7667/gateway/IntelliData-ComponentDocumentation/1.0/download/datasheet/SCF19XV-300-1R9A003JV.pdf"))
+          (property (rename &Height "Height") (string "27.5 mm"))
+          (property (rename &_60__32_VALUE_32__62_ "Value") (string "SCF19XV_300_1R9A003JV"))
+          (property (rename VALUE "Value") (string "Value"))
+          (port
+            (rename &N1_1 "N1_1")
+            (designator "1")
+            (property (rename ORDER "Order") (string "0") (owner "OrCAD"))
+          )
+          (port
+            (rename &N1_2 "N1_2")
+            (designator "2")
+            (property (rename ORDER "Order") (string "1") (owner "OrCAD"))
+          )
+          (port
+            (rename &N2_1 "N2_1")
+            (designator "3")
+            (property (rename ORDER "Order") (string "2") (owner "OrCAD"))
+          )
+          (port
+            (rename &N2_2 "N2_2")
+            (designator "4")
+            (property (rename ORDER "Order") (string "3") (owner "OrCAD"))
+          )
+          (symbol
+            (portImplementation
+              (name &N1_1 (display PINNAME))
+              (keywordDisplay DESIGNATOR (display PINNUMBER))
+              (figure PIN (path (pointList (pt -200 -100) (pt 0 -100))))
+              (connectLocation (figure GRAPHIC (dot (pt -200 -100))))
+            )
+            (portImplementation
+              (name &N1_2 (display PINNAME))
+              (keywordDisplay DESIGNATOR (display PINNUMBER))
+              (figure PIN (path (pointList (pt -200 -200) (pt 0 -200))))
+              (connectLocation (figure GRAPHIC (dot (pt -200 -200))))
+            )
+            (portImplementation
+              (name &N2_1 (display PINNAME))
+              (keywordDisplay DESIGNATOR (display PINNUMBER))
+              (figure PIN (path (pointList (pt 700 -200) (pt 900 -200))))
+              (connectLocation (figure GRAPHIC (dot (pt 900 -200))))
+            )
+            (portImplementation
+              (name &N2_2 (display PINNAME))
+              (keywordDisplay DESIGNATOR (display PINNUMBER))
+              (figure PIN (path (pointList (pt 700 -100) (pt 900 -100))))
+              (connectLocation (figure GRAPHIC (dot (pt 900 -100))))
+            )
+            (figure GRAPHIC
+              (figureGroupOverride GRAPHIC
+                (pathWidth 10))
+              (path
+                (pointList
+                  (pt 0 0)
+                  (pt 700 0)
+                  (pt 700 -300)
+                  (pt 0 -300)
+                  (pt 0 0)
+                )
+              )
+            )
+            (keywordDisplay DESIGNATOR (display PROPERTY (justify LOWERLEFT) (orientation R0) (origin (pt 750 130))))
+            (propertyDisplay &_60__32_VALUE_32__62_ (display PROPERTY (justify LOWERLEFT) (orientation R0) (origin (pt 750 30))))
+          )
+        )
+      )
+    )
+  )
+)

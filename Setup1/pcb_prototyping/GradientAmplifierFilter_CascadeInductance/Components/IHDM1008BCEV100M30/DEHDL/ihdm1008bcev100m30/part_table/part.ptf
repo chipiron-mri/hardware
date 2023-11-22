@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'IHDM1008BCEV100M30'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Vishay", "IHDM1008BCEV100M30" (!) = "", "IHDM1008BCEV100M30", "Other", "70-IHDM1008BCV100M30", "https://www.mouser.co.uk/ProductDetail/Vishay-Dale/IHDM1008BCEV100M30?qs=T3oQrply3y8HteQqJVJyLg%3D%3D", "", "", "VISHAY - IHDM1008BCEV100M30 - INDUCTOR, 10UH, 20%, 30A", "https://www.mouser.com/datasheet/2/427/ihdm-1008bc-v0-1596104.pdf", "22.75 mm"
+END_PART
+
+END.

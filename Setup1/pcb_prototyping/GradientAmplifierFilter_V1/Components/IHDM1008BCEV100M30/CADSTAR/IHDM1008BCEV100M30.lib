@@ -1,0 +1,18 @@
+.IHDM1008BCEV100M30 :1 ;VISHAY - IHDM1008BCEV100M30 - INDUCTOR, 10UH, 20%, 30A
+IHDM1008BCEV100M30
+*STM L
+*NGS
+*PLB 1="1" 2="2"
+*MXP 2
+*DFN IHDM1008BCEV100M30
+~!Manufacturer_Name (Vishay)
+~!Manufacturer_Part_Number (IHDM1008BCEV100M30)
+~!Mouser Part Number (70-IHDM1008BCV100M30)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Vishay-Dale/IHDM1008BCEV100M30?qs=T3oQrply3y8HteQqJVJyLg%3D%3D)
+~!Arrow Part Number (-)
+~!Arrow Price/Stock (-)
+~!Link Datasheet (https://www.mouser.com/datasheet/2/427/ihdm-1008bc-v0-1596104.pdf)
+~!Height (22.75mm)
+~!3D_Model (IHDM1008BCEV100M30)
+IHDM1008BCEV100M30
+1.1!U 2.1!U 

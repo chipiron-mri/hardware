@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'B32320I8207K000'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "TDK", "B32320I8207K000" (!) = "", "B32320I8207K000", "Other", "871-B32320I8207K000", "https://www.mouser.co.uk/ProductDetail/EPCOS-TDK/B32320I8207K000?qs=ti9wR6LxNKVDH%2F2Xvz2DHw%3D%3D", "AC Film Capacitors incl. Motor Run, 200?F, 800V DC, 60mm (D) x 120mm (H)", "https://product.tdk.com/system/files/dam/doc/product/capacitor/film/ac-motor/data_sheet/b32320i_series.pdf", "120 mm"
+END_PART
+
+END.
