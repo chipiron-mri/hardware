@@ -1,0 +1,13 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"10-15062010-163753";"";
+"REFERENCE";"227715-3";"";
+"rs_stock_number";"2509229373";"";
+"TraceParts.PartTitle";"Connector; 50 Ohms; Straight; Coaxial";"";
+"SUPPLIER_NAME";"RS Components";"";
+"Buy_Now";"https://uk.rs-online.com/web/p/products/2509229373";"";
+"SUPPLIER";"TE Connectivity";"";
+"DESIGN";"Connector; 50 Ohms; Straight; Coaxial";"";
+"TraceParts.InstanceId";"10-15062010-163753CMYIC5UW1N74Y1XPYM2Y9F3GT";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartLanguage";"fr";"";
+"TraceParts.PartVersion";"1.1.3";"";
