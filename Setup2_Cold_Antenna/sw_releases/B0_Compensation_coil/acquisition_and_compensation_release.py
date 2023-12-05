@@ -12,12 +12,20 @@ import pyvisa
 import numpy as np
 from collections import namedtuple
 
+import pyinotify
+import time
+import os
+
 #macros 
 DUAL_PROBE = False           #set True if using 2 magnetometers
-SINGLE_PROBE_OFFSET = -35    #in uT, used when no seconds probe is used the measure the DC offset in the FOV
+#SINGLE_PROBE_OFFSET = -35    #in uT, used when no seconds probe is used the measure the DC offset in the FOV
 PRINT_ACQUISITION = False     #set True to print ADC output to terminal
 PRINT_COMPENSATION = False   #set True to print supply input to terminal
-OUTPUT_NAME = 'output.txt'
+OUTPUT_NAME = 'data/output.txt'
+CORRECTION_PATH = 'data/correction_status.txt'
+OFFSET_PATH = 'data/offset.txt'
+end_time = -1
+calibration_time = 10
 
 #constants for acquisition
 Vref = 2.5
@@ -38,6 +46,62 @@ F_CUTOFF_NORM = float(F_CUTOFF)/float(F_NYQUIST)
 B, A = butter(N, F_CUTOFF_NORM, btype='low', analog=False)  #numerator and denominator of the LPF transfer function
 BUFFER_SIZE = int(F_SAMPLING/2)       #size of the data buffer used for filtering, increases as cutoff frequency decreases 
 
+#Define initial values
+f = open(OFFSET_PATH,"r")
+SINGLE_PROBE_OFFSET = int(f.readline())
+f.close()
+
+f = open(CORRECTION_PATH,"r")
+correction_ON = int(f.readline())
+f.close()
+
+#Change correction status if file changed its value
+def correction_status_changed(ev):
+    global correction_ON
+    try:
+        f = open(CORRECTION_PATH,"r")
+        correction_ON = int(f.readline())
+        f.close()
+
+        print ("Correction Changed{}".format(correction_ON))
+    except Exception as e:
+        print (e)
+
+#Change offset value if file changed its value
+def offset_changed(ev):
+    global SINGLE_PROBE_OFFSET
+    try:
+        f = open(OFFSET_PATH,"r")
+        SINGLE_PROBE_OFFSET = int(f.readline())
+        f.close()
+
+        print ("Offset Changed {}".format(SINGLE_PROBE_OFFSET))
+    except Exception as e:
+        print (e)
+
+
+#threads for check filesystem 
+def correction_thread(self):
+    pyinotify.Notifier(correction_status_wm).loop()
+def offset_thread(self):
+    pyinotify.Notifier(offset_wm).loop()
+
+#start threads to monitor file changes
+correction_status_wm = pyinotify.WatchManager()
+correction_status_wm.add_watch(CORRECTION_PATH, pyinotify.IN_MODIFY, correction_status_changed)
+correction_thread = threading.Thread(target=correction_thread, args=(1,))
+correction_thread.start()
+
+offset_wm = pyinotify.WatchManager()
+offset_wm.add_watch(OFFSET_PATH, pyinotify.IN_MODIFY, offset_changed)
+offset_thread = threading.Thread(target=offset_thread, args=(1,))
+offset_thread.start()
+
+def correction_thread(self):
+    pyinotify.Notifier(correction_status_wm).loop()
+
+def offset_thread(self):
+    pyinotify.Notifier(offset_wm).loop()
 
 #---Definition of functions and types---
 def open_serial_connection(port):
@@ -59,14 +123,16 @@ def write_f(sample):
     sample_string = f'{sample.us_counter*1e-6:.5f}\t{sample.B1_field:.4f}\t{sample.B2_field:.4f}\t{B1_mean:.4f}\t{B2_mean:.4f}\t{sample.B1_filtered:.4f}\n'
     f.write (sample_string)
     f.flush()
-
+'''
 def check_arguments ():
     if len(sys.argv) != 3:
         print ("Invalid arguments")
         print(f'Usage: python3 {sys.argv[0]} calibration_duration acquisition_duration')
         print ('Set acquisition_duration to -1 for infinite duration')
         sys.exit(1)
-
+'''
+#Launch kst
+os.system("kst2")
 #function ran by supply_thread
 def supply_control (B1_mean, B_offset):  
     supply_write ('VOLT 5, (@1)')
@@ -117,6 +183,7 @@ def calibration (duration):
     data1 = np.array([])
     data2 = np.array([])
 
+    print ('Offset: [{}] correction: [{}]\n'.format(SINGLE_PROBE_OFFSET, correction_ON))
     print ('---Calibration start--- \n')
     print (f'Wait {duration} seconds\n')
     sample = SerialData()
@@ -190,7 +257,7 @@ def update_values (write):        #gets serial, computes filtered values and wri
     sample.B1_filtered = lfilter (B,A,data1_buffer)[-1]
     with lock:
         B1_filtered = sample.B1_filtered
-        correction_ON = bool ((sample.status[0] >> 0) & 1)
+        #correction_ON = bool ((sample.status[0] >> 0) & 1)
     if write:
         write_f(sample)
 
@@ -213,19 +280,18 @@ class SerialData:
 
 #---Beginning of the program---
 B1_filtered = B1_mean = B2_mean = 0
-correction_ON = 0
 data1_buffer = []
 lock = threading.Lock() #for sharing of variables between main thread and supply_thread
 stop_flag = threading.Event()
 
 #--Initialization--
-check_arguments()
+#check_arguments()
 supply = supply_init()                  #init communication with DC supply
 ser = open_serial_connection(PORTNAME)  #init serial connection with arduino 
 f = init_f()                            #open output file
 data1_buffer = prefill_buffer()         #prefil buffer prior to filtering of input1
 
-B1_field, B1_filtered, B2_field, B1_mean, B2_mean = calibration(float(sys.argv[1]))
+B1_field, B1_filtered, B2_field, B1_mean, B2_mean = calibration(float(calibration_time))
 print (f'B1_mean: {B1_mean}\tB2_mean: {B2_mean}\n')
 
 #start the thread controlling the DC supply
@@ -237,10 +303,13 @@ start_time = time.time()
 settling_delay = 1      #gives a few seconds for DC supply to stabilize 
 acquisition_begin_time = start_time + settling_delay
 
+'''
 if float(sys.argv[2]) == -1:
     end_time = -1
 else:
     end_time = acquisition_begin_time + float(sys.argv[2])
+'''
+
 data1 = np.array([])
 data2 = np.array([])
 
